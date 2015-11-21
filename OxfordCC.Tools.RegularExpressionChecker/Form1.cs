@@ -21,7 +21,17 @@ namespace OxfordCC.Tools.RegularExpressionChecker
 
 		private void btnGO_Click(object sender, EventArgs e)
 		{
-			Regex r = new Regex(txtPattern.Text);
+			RegexOptions options = RegexOptions.None;
+
+			if (!chkCaseSensitive.Checked)
+				options = options | RegexOptions.IgnoreCase;
+
+			if (rbMultiLine.Checked)
+				options = options | RegexOptions.Multiline;
+			else
+				options = options | RegexOptions.Singleline;
+
+			Regex r = new Regex(txtPattern.Text, options);
 			Match m = r.Match(txtText.Text);
 
 			chkSuccess.Checked = m.Success;

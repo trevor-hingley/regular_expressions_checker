@@ -35,12 +35,15 @@
 			this.btnGO = new System.Windows.Forms.Button();
 			this.chkSuccess = new System.Windows.Forms.CheckBox();
 			this.lvwGroups = new System.Windows.Forms.ListView();
+			this.Group = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.lblGroups = new System.Windows.Forms.Label();
 			this.lblSuccess = new System.Windows.Forms.Label();
 			this.lblCaptures = new System.Windows.Forms.Label();
 			this.lvwCaptures = new System.Windows.Forms.ListView();
-			this.Group = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Capture = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.chkCaseSensitive = new System.Windows.Forms.CheckBox();
+			this.rbSingleLine = new System.Windows.Forms.RadioButton();
+			this.rbMultiLine = new System.Windows.Forms.RadioButton();
 			this.SuspendLayout();
 			// 
 			// lblPattern
@@ -73,7 +76,7 @@
 			this.txtText.Location = new System.Drawing.Point(83, 46);
 			this.txtText.Multiline = true;
 			this.txtText.Name = "txtText";
-			this.txtText.Size = new System.Drawing.Size(671, 160);
+			this.txtText.Size = new System.Drawing.Size(671, 94);
 			this.txtText.TabIndex = 3;
 			// 
 			// btnGO
@@ -106,6 +109,11 @@
 			this.lvwGroups.TabIndex = 6;
 			this.lvwGroups.UseCompatibleStateImageBehavior = false;
 			this.lvwGroups.View = System.Windows.Forms.View.Details;
+			// 
+			// Group
+			// 
+			this.Group.Text = "Group";
+			this.Group.Width = 1000;
 			// 
 			// lblGroups
 			// 
@@ -146,21 +154,53 @@
 			this.lvwCaptures.UseCompatibleStateImageBehavior = false;
 			this.lvwCaptures.View = System.Windows.Forms.View.Details;
 			// 
-			// Group
-			// 
-			this.Group.Text = "Group";
-			this.Group.Width = 1000;
-			// 
 			// Capture
 			// 
 			this.Capture.Text = "Capture";
 			this.Capture.Width = 1000;
+			// 
+			// chkCaseSensitive
+			// 
+			this.chkCaseSensitive.AutoSize = true;
+			this.chkCaseSensitive.Checked = true;
+			this.chkCaseSensitive.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.chkCaseSensitive.Location = new System.Drawing.Point(83, 159);
+			this.chkCaseSensitive.Name = "chkCaseSensitive";
+			this.chkCaseSensitive.Size = new System.Drawing.Size(96, 17);
+			this.chkCaseSensitive.TabIndex = 11;
+			this.chkCaseSensitive.Text = "Case Sensitive";
+			this.chkCaseSensitive.UseVisualStyleBackColor = true;
+			// 
+			// rbSingleLine
+			// 
+			this.rbSingleLine.AutoSize = true;
+			this.rbSingleLine.Checked = true;
+			this.rbSingleLine.Location = new System.Drawing.Point(677, 158);
+			this.rbSingleLine.Name = "rbSingleLine";
+			this.rbSingleLine.Size = new System.Drawing.Size(77, 17);
+			this.rbSingleLine.TabIndex = 12;
+			this.rbSingleLine.TabStop = true;
+			this.rbSingleLine.Text = "Single Line";
+			this.rbSingleLine.UseVisualStyleBackColor = true;
+			// 
+			// rbMultiLine
+			// 
+			this.rbMultiLine.AutoSize = true;
+			this.rbMultiLine.Location = new System.Drawing.Point(677, 181);
+			this.rbMultiLine.Name = "rbMultiLine";
+			this.rbMultiLine.Size = new System.Drawing.Size(70, 17);
+			this.rbMultiLine.TabIndex = 12;
+			this.rbMultiLine.Text = "Multi Line";
+			this.rbMultiLine.UseVisualStyleBackColor = true;
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(784, 561);
+			this.Controls.Add(this.rbMultiLine);
+			this.Controls.Add(this.rbSingleLine);
+			this.Controls.Add(this.chkCaseSensitive);
 			this.Controls.Add(this.lvwCaptures);
 			this.Controls.Add(this.lblCaptures);
 			this.Controls.Add(this.lblSuccess);
@@ -198,6 +238,9 @@
 		private System.Windows.Forms.ListView lvwCaptures;
 		private System.Windows.Forms.ColumnHeader Group;
 		private System.Windows.Forms.ColumnHeader Capture;
+		private System.Windows.Forms.CheckBox chkCaseSensitive;
+		private System.Windows.Forms.RadioButton rbSingleLine;
+		private System.Windows.Forms.RadioButton rbMultiLine;
 	}
 }
 
